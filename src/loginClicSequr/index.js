@@ -1,6 +1,7 @@
-//loginClicSequr.js
+"use strict";
+//index.js
 //logs in either clic sequr express or entreprises using puppeteer wrapper object methods
-const getCredentials = require("./getCredentials");
+const {getCredentials} = require("../db");
 
 module.exports = {
   loginClicSequr: async (mode, puppeteerWrapper) => {
@@ -18,7 +19,7 @@ module.exports = {
 };
 
 function getValidTargetFromParams(mode, puppeteerWrapper) {
-  const { gouvQc } = require("./configs");
+  const {gouvQc} = require("./configs");
 
   if (!mode || (mode !== "entreprises" && mode !== "express") || !gouvQc.clicSequr.hasOwnProperty(mode)) {
     throw new Error("provide login mode for clic sequr (one of 'entreprises' or 'express')");
