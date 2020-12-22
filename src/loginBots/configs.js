@@ -1,4 +1,7 @@
+const path = require("path");
+
 module.exports = {
+  encryptedCredentialsPath: path.join(process.env.InvokedFrom, "encrypted.json"),
   gouvQc: {
     clicSequr: {
       entreprises: {
