@@ -1,8 +1,12 @@
 "use strict";
-const {puppeteerWrapper} = require("./puppeteerWrapper");
-const {loginClicSequr} = require("./loginClicSequr");
+const {saveCredentials} = require("./db");
+const {puppeteerController} = require("./puppeteerController");
+const {loginClicSequr} = require("./loginClicSequr/loginClicSequr");
+
+// saveCredentials({username: "client1", password: "12345"});
 
 (async () => {
-  await puppeteerWrapper.initializeBrowser();
-  await loginClicSequr("entreprises", puppeteerWrapper);
+  await puppeteerController.initializeBrowser();
+  await loginClicSequr("entreprises", puppeteerController);
 })();
+

@@ -1,5 +1,5 @@
 "use strict";
-//index.js
+//loginClicSequr.js
 //logs in either clic sequr express or entreprises using puppeteer wrapper object methods
 const {getCredentials} = require("../db");
 
@@ -19,13 +19,13 @@ module.exports = {
 };
 
 function getValidTargetFromParams(mode, puppeteerWrapper) {
-  const {gouvQc} = require("./configs");
+  const {gouvQc} = require("./websiteConfigs");
 
   if (!mode || (mode !== "entreprises" && mode !== "express") || !gouvQc.clicSequr.hasOwnProperty(mode)) {
     throw new Error("provide login mode for clic sequr (one of 'entreprises' or 'express')");
   }
   if (!puppeteerWrapper) {
-    throw new Error("provide puppeteerWrapper object");
+    throw new Error("provide puppeteerController object");
   }
 
   const target = gouvQc.clicSequr[mode];

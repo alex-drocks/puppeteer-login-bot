@@ -3,7 +3,7 @@ const Conf = require('conf');
 const path = require("path");
 
 //todo prompt user
-const secret = "fake-secret";
+const secret = "fakesecret";
 
 const db = new Conf({
   encryptionKey: secret + "ZE7sdmpNWjRRIqCc7rvxs12lwHzfr4",
@@ -18,7 +18,7 @@ module.exports = {
     return db.get("credentials");
   },
 
-  saveCredentials: (credentials, encryptSecret) => {
+  saveCredentials: (credentials) => {
     if (!credentials || typeof credentials !== "object") {
       throw new Error("(credentials) param must be of type object got: " + typeof credentials);
     }

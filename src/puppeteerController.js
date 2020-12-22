@@ -1,9 +1,9 @@
-//puppeteerWrapper.js
+//puppeteerController.js
 //Simplifies logic in macros that use puppeteer.
 const puppeteer = require("puppeteer");
 
 module.exports = {
-  puppeteerWrapper: {
+  puppeteerController: {
     browser: null,
     page: null,
 
