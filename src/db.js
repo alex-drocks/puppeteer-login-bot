@@ -3,7 +3,7 @@ const Conf = require('conf');
 const path = require("path");
 
 //todo prompt user
-const secret = "test-secret";
+const secret = "fake-secret";
 
 const db = new Conf({
   encryptionKey: secret + "ZE7sdmpNWjRRIqCc7rvxs12lwHzfr4",
