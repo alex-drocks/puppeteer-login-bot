@@ -1,3 +1,4 @@
+//Simple JSON file storage
 "use strict";
 const Conf = require('conf');
 const path = require("path");
@@ -9,8 +10,9 @@ const db = new Conf({
   encryptionKey: secret + "ZE7sdmpNWjRRIqCc7rvxs12lwHzfr4",
   cwd: path.resolve(process.env.invokedFrom || "C:\\Users\\Alex\\Desktop\\Sage50 fake\\Client1\\Autres"),
   configName: "encrypted",
+  fileExtension: "json",
   clearInvalidConfig: false,
-})
+});
 
 module.exports = {
 
